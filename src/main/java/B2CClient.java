@@ -20,7 +20,6 @@ public class B2CClient {
 
         HttpEntity entity = response.getEntity();
 
-
         return new Gson().fromJson(EntityUtils.toString(entity), JsonObject.class);
 
     }
