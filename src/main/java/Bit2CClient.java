@@ -9,7 +9,7 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 
-public class B2CClient {
+public class Bit2CClient implements TraderClientSeller {
     private CloseableHttpClient httpclient =  HttpClients.createDefault();
 
 
@@ -21,6 +21,16 @@ public class B2CClient {
         HttpEntity entity = response.getEntity();
 
         return new Gson().fromJson(EntityUtils.toString(entity), JsonObject.class);
+
+    }
+
+    public double getLiteCoinBalance() {
+
+    return 0;
+    }
+
+    @Override
+    public void sell() {
 
     }
 }
